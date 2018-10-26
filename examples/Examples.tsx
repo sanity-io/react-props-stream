@@ -3,6 +3,7 @@ import {ErrorsExample} from './errors'
 import {EventHandlersExample} from './event-handlers'
 import {FetchExample} from './fetch'
 import { FormDataExample } from "./form-data";
+import {HooksExample} from './hooks'
 import {PassThroughPropsExample} from './passthrough-props'
 import {SearchExample} from './search'
 import {SimpleExample} from './simple'
@@ -18,6 +19,7 @@ const examples: {[exampleName: string]: Example} = {
   search: {title: 'Search', component: SearchExample},
   sync: {title: 'Sync', component: SyncExample},
   simple: {title: 'Simple', component: SimpleExample},
+  hooks: {title: 'React hooks', component: HooksExample},
   eventHandlers: {title: 'Event handlers', component: EventHandlersExample},
   fetch: {title: 'Fetch', component: FetchExample},
   passThroughProps: {title: 'Pass through props', component: PassThroughPropsExample},
