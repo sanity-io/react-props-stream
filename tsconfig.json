@@ -1,13 +1,7 @@
 {
-  "exclude": ["examples", "build"],
+  "extends": "./ts/tsconfig-base.json",
   "compilerOptions": {
-    "outDir": "build",
     "target": "es5",
-    "module": "commonjs",
-    "jsx": "react",
-    "declaration": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true
+    "module": "commonjs"
   }
 }
