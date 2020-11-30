@@ -1,7 +1,14 @@
 {
-  "extends": "./ts/tsconfig-base.json",
+  "exclude": ["./node_modules/**/*"],
   "compilerOptions": {
+    "strict": true,
     "target": "es5",
-    "module": "commonjs"
-  }
+    "declaration": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node"
+  },
+  "files": ["./index.ts"]
 }

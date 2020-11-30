@@ -16,7 +16,7 @@ export function streamingComponent<SourceProps>(
     subscription: Subscription
     props$: Subject<SourceProps> = new Subject()
 
-    constructor(props) {
+    constructor(props: SourceProps) {
       super(props)
       this.state = {node: null}
 
@@ -33,7 +33,7 @@ export function streamingComponent<SourceProps>(
       isSync = false
     }
 
-    setStateMaybeSync = (nextState, isSync: boolean) => {
+    setStateMaybeSync = (nextState: State, isSync: boolean) => {
       if (isSync) {
         this.state = nextState
       } else {

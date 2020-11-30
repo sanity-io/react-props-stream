@@ -22,7 +22,7 @@ export function withPropsStream<SourceProps, TargetProps>(
   const displayName =
     typeof TargetComponent === 'string'
       ? TargetComponent
-      : TargetComponent.displayName || TargetComponent.name || 'Component'
+      : TargetComponent.displayName || (TargetComponent as any).name || 'Component'
 
   ComposedComponent.displayName = `withPropsStream(${displayName})`
   return ComposedComponent
