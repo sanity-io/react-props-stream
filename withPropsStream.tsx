@@ -1,5 +1,4 @@
 import * as React from 'react'
-import wrapDisplayName from 'recompose/wrapDisplayName'
 import {Observable} from 'rxjs'
 import {map} from 'rxjs/operators'
 import {streamingComponent} from './streamingComponent'
@@ -19,6 +18,12 @@ export function withPropsStream<SourceProps, TargetProps>(
         : observableOrFactory
     return targetProps$.pipe(map(props => <TargetComponent {...props} />))
   })
-  ComposedComponent.displayName = wrapDisplayName(TargetComponent, 'withPropsStream')
+
+  const displayName =
+    typeof TargetComponent === 'string'
+      ? TargetComponent
+      : TargetComponent.displayName || TargetComponent.name || 'Component'
+
+  ComposedComponent.displayName = `withPropsStream(${displayName})`
   return ComposedComponent
 }
