@@ -4,6 +4,7 @@
   "description": "Utility belt for RxJS streams and React",
   "main": "build/cjs/index.js",
   "module": "build/es/index.js",
+  "sideEffects": false,
   "scripts": {
     "build": "npm run build-cjs && npm run build-es",
     "build-cjs": "tsc -d -p ts/tsconfig-cjs.json",
